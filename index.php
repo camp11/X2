@@ -1375,6 +1375,57 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Sponsored' || $command == 'sponsor' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'SPONSOR EVENT',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925795/ANNE/Sponsor/10.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'ADD ME',
+          'uri' => 'https://line.me/R/ti/p/%40zuu3727b',
+        ),
+      ),
+      1 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925793/ANNE/Sponsor/11.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'ADD ME',
+          'uri' => 'http://line.me/ti/p/~salsabilaazkafa',
+        ),
+      ),
+      2 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925792/ANNE/Sponsor/12.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'ADD ME',
+          'uri' => 'http://line.me/ti/p/~dwiyah89',
+        ),
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
 if (isset($balas)) {
     $result = json_encode($balas);
 //$result = ob_get_clean();
