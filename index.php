@@ -1158,7 +1158,7 @@ if($message['type']=='text') {
                 array (
   'type' => 'imagemap',
   'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527884213/ANNE/WELCOME',
-  'altText' => 'WELCOME TO BIRTHDAY EVENT ANNE,
+  'altText' => 'WELCOME TO BIRTHDAY EVENT ANNE',
   'baseSize' => 
   array (
     'height' => 1040,
@@ -1218,6 +1218,128 @@ if($message['type']=='text') {
           'type' => 'uri',
           'label' => 'CHAT PM',
           'uri' => 'http://line.me/ti/p/8jX6OIm-AS',
+        ),
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Judges' || $command == 'judges' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'JUDGES EVENT',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'imageUrl' => '',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/nneKBS',
+        ),
+      ),
+      1 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885195/ANNE/CREW%20JUDGES/1.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/EBS_BRenoJL_KBS',
+        ),
+      ),
+      2 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885205/ANNE/CREW%20JUDGES/2.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/VIF_lien',
+        ),
+      ),
+      3 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885197/ANNE/CREW%20JUDGES/3.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/_CiNTA7D_PSE_SWX',
+        ),
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Crew' || $command == 'crew' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'CREWS EVENT',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885191/ANNE/CREW%20JUDGES/4.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/KVA1_LUFFY_NGVC',
+        ),
+      ),
+      1 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885202/ANNE/CREW%20JUDGES/5.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/KBS_sailup',
+        ),
+      ),
+      2 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885198/ANNE/CREW%20JUDGES/6.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/_DFS_CICIK_NL98',
+        ),
+      ),
+      3 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885199/ANNE/CREW%20JUDGES/7.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'SMULE',
+          'uri' => 'http://smule.com/AVRILMelvo_KBS',
         ),
       ),
     ),
