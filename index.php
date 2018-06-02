@@ -6,8 +6,8 @@ pyupyu
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = '38LF2BWWazL3QmSUxmKY0zF4ALygkHTHSJkdNCos8KHr8axUNCuh+sV3ZpNBTtGq0srXDwnD2a1fvA4h5yeBETKixBIbvw+qlUdMcmv9CTyVl6PunGdvkPOfMh6CqtVmuf6b0rOPg7g8Ipe43AnLOgdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = '17976403fa565616ca9d9f1bcb19223f';//sesuaikan
+$channelAccessToken = ''; //sesuaikan 
+$channelSecret = '';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -147,66 +147,6 @@ function ytdownload($keyword) {
     return $result;
 }
 #-------------------------[Function]-------------------------#
-function anime($keyword) {
-
-    $fullurl = 'https://myanimelist.net/api/anime/search.xml?q=' . $keyword;
-    $username = 'jamal3213';
-    $password = 'FZQYeZ6CE9is';
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_VERBOSE, 1);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_URL, $fullurl);
-
-    $returned = curl_exec($ch);
-    $xml = new SimpleXMLElement($returned);
-    $parsed = array();
-
-    $parsed['id'] = (string) $xml->entry[0]->id;
-    $parsed['image'] = (string) $xml->entry[0]->image;
-    $parsed['title'] = (string) $xml->entry[0]->title;
-    $parsed['desc'] = "Episode : ";
-    $parsed['desc'] .= $xml->entry[0]->episodes;
-    $parsed['desc'] .= "\nNilai : ";
-    $parsed['desc'] .= $xml->entry[0]->score;
-    $parsed['desc'] .= "\nTipe : ";
-    $parsed['desc'] .= $xml->entry[0]->type;
-    $parsed['synopsis'] = str_replace("<br />", "\n", html_entity_decode((string) $xml->entry[0]->synopsis, ENT_QUOTES | ENT_XHTML, 'UTF-8'));
-    return $parsed;
-}
-#-------------------------[Function]-------------------------#
-function manga($keyword) {
-
-    $fullurl = 'https://myanimelist.net/api/manga/search.xml?q=' . $keyword;
-    $username = 'jamal3213';
-    $password = 'FZQYeZ6CE9is';
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_VERBOSE, 1);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_URL, $fullurl);
-
-    $returned = curl_exec($ch);
-    $xml = new SimpleXMLElement($returned);
-    $parsed = array();
-
-    $parsed['id'] = (string) $xml->entry[0]->id;
-    $parsed['image'] = (string) $xml->entry[0]->image;
-    $parsed['title'] = (string) $xml->entry[0]->title;
-    $parsed['desc'] = "Episode : ";
-    $parsed['desc'] .= $xml->entry[0]->episodes;
-    $parsed['desc'] .= "\nNilai : ";
-    $parsed['desc'] .= $xml->entry[0]->score;
-    $parsed['desc'] .= "\nTipe : ";
-    $parsed['desc'] .= $xml->entry[0]->type;
-    $parsed['synopsis'] = str_replace("<br />", "\n", html_entity_decode((string) $xml->entry[0]->synopsis, ENT_QUOTES | ENT_XHTML, 'UTF-8'));
-    return $parsed;
-}
-#-------------------------[Function]-------------------------#
 function ps($keyword) { 
     $uri = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20171227T171852Z.fda4bd604c7bf41f.f939237fb5f802608e9fdae4c11d9dbdda94a0b5&text=" . $keyword . "&lang=id-id"; 
  
@@ -219,20 +159,6 @@ function ps($keyword) {
     $result .= "https://play.google.com/store/search?q=" . $keyword . "";
     $result .= "\n\nPencarian : PlayStore";
     return $result; 
-}
-#-------------------------[Function]-------------------------#
-function anime_syn($title) {
-    $parsed = anime($title);
-    $result = "Judul : " . $parsed['title'];
-    $result .= "\n\nSynopsis :\n" . $parsed['synopsis'];
-    return $result;
-}
-#-------------------------[Function]-------------------------#
-function manga_syn($title) {
-    $parsed = manga($title);
-    $result = "Judul : " . $parsed['title'];
-    $result .= "\n\nSynopsis :\n" . $parsed['synopsis'];
-    return $result;
 }
 #-------------------------[Function]-------------------------#
 function say($keyword) { 
@@ -276,64 +202,6 @@ function music($keyword) {
     $result .= $json['0']['4'];
     $result .= "\n\nPencarian : Google";
     $result .= "\n====[Music]====";
-    return $result; 
-}
-#-------------------------[Function]-------------------------#
-function githubrepo($keyword) { 
-    $uri = "https://api.github.com/search/repositories?q=" . $keyword; 
- 
-    $response = Unirest\Request::get("$uri"); 
- 
-    $json = json_decode($response->raw_body, true); 
-    $result = "====[GithubRepo]====";
-    $result .= "\n====[1]====";
-    $result .= "\nResult : ";
-    $result .= $json['total_count'];
-    $result .= "\nNama Repository : ";
-    $result .= $json['items']['data']['name'];
-    $result .= "\nNama Github : ";
-    $result .= $json['items']['full_name'];
-    $result .= "\nLanguage : ";
-    $result .= $json['items']['language'];
-    $result .= "\nUrl Github : ";
-    $result .= $json['items']['owner']['html_url'];
-    $result .= "\nUrl Repository : ";
-    $result .= $json['items']['html_url'];
-    $result .= "\nPrivate : ";
-    $result .= $json['items']['private'];
-    $result .= "\n====[2]====";
-    $result .= "\nResult : ";
-    $result .= $json['total_count'];
-    $result .= "\nNama Repository : ";
-    $result .= $json['items'][['name']];
-    $result .= "\nNama Github : ";
-    $result .= $json['items']['full_name'];
-    $result .= "\nLanguage : ";
-    $result .= $json['items']['language'];
-    $result .= "\nUrl Github : ";
-    $result .= $json['items']['owner']['html_url'];
-    $result .= "\nUrl Repository : ";
-    $result .= $json['items']['html_url'];
-    $result .= "\nPrivate : ";
-    $result .= $json['items']['private'];
-    $result .= "\n====[3]====";
-    $result .= "\nResult : ";
-    $result .= $json['total_count'];
-    $result .= "\nNama Repository : ";
-    $result .= $json['items']['name'];
-    $result .= "\nNama Github : ";
-    $result .= $json['items']['full_name'];
-    $result .= "\nLanguage : ";
-    $result .= $json['items']['language'];
-    $result .= "\nUrl Github : ";
-    $result .= $json['items']['owner']['html_url'];
-    $result .= "\nUrl Repository : ";
-    $result .= $json['items']['html_url'];
-    $result .= "\nPrivate : ";
-    $result .= $json['items']['private'];
-    $result .= "\n====[GithubRepo]====\n";
-    $result .= "\n\nPencarian : Google";
-    $result .= "\n====[GithubRepo]====";
     return $result; 
 }
 #-------------------------[Function]-------------------------#
@@ -499,113 +367,6 @@ function qrcode($keyword) {
     return $uri;
 }
 #-------------------------[Function]-------------------------#
-function adfly($url, $key, $uid, $domain = 'adf.ly', $advert_type = 'int')
-{
-  // base api url
-  $api = 'http://api.adf.ly/api.php?';
-
-  // api queries
-  $query = array(
-    '7970aaad57427df04129cfe2cfcd0584' => $key,
-    '16519547' => $uid,
-    'advert_type' => $advert_type,
-    'domain' => $domain,
-    'url' => $url
-  );
-
-  // full api url with query string
-  $api = $api . http_build_query($query);
-  // get data
-  if ($data = file_get_contents($api))
-    return $data;
-}
-#----------------#
-function send($input, $rt){
-    $send = array(
-        'replyToken' => $rt,
-        'messages' => array(
-            array(
-                'type' => 'text',					
-                'text' => $input
-            )
-        )
-    );
-    return($send);
-}
-
-function jawabs(){
-    $list_jwb = array(
-		'Ya',
-		'Tidak',
-		'Coba ajukan pertanyaan lain',	    
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
-
-function kapan(){
-    $list_jwb = array(
-		'Besok',
-		'1 Hari Lagi',
-		'1 Bulan Lagi',
-		'1 Tahun Lagi',
-		'1 Abad Lagi',
-		'Coba ajukan pertanyaan lain',	    
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
-
-function bisa(){
-    $list_jwb = array(
-		'Bisa',
-		'Tidak Bisa',
-		'Bisa Jadi',
-		'Mungkin Tidak Bisa',
-		'Coba ajukan pertanyaan lain',	    
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
-
-function dosa(){
-    $list_jwb = array(
-		'10%',
-		'20%',
-		'30%',
-		'40%',
-		'50%',
-		'60%',
-		'70%',
-		'80%',
-		'90%',
-		'100%'	
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
-
-function dosa2(){
-    $list_jwb = array(
-		'Dosanya Sebesar ',
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
-function dosa3(){
-    $list_jwb = array(
-		' Cepat cepat tobat bos',
-		);
-    $jaws = array_rand($list_jwb);
-    $jawab = $list_jwb[$jaws];
-    return($jawab);
-}
-#-------------------------[Function]-------------------------#
 
 function zodiak($keyword) {
     $uri = "https://script.google.com/macros/exec?service=AKfycbw7gKzP-WYV2F5mc9RaR7yE3Ve1yN91Tjs91hp_jHSE02dSv9w&nama=ervan&tanggal=" . $keyword;
@@ -629,20 +390,18 @@ function zodiak($keyword) {
 #-------------------------[Function]-------------------------#
 //show menu, saat join dan command,menu
 if ($type == 'join' || $command == 'Help') {
-    $text .= "==[FIS BOT-keywords]==";
+    $text .= "==[Main Keywords]==";
     $text .= "> \n";
     $text .= "> welcome\n"; 
-    $text .= "> FIS\n";
-    $text .= "> Admin\n";
+    $text .= "> Crew\n";
+    $text .= "> Judges\n";
     $text .= "> /shalat [namakota]\n";
     $text .= "> /zodiak [tanggallahir]\n";
     $text .= "> /lokasi [namakota]\n";
     $text .= "> /time [namakota]\n";
     $text .= "> /kalender [namakota]\n";
     $text .= "> /cuaca [namakota]\n";
-    $text .= "> /def [text]\n";
     $text .= "> /qiblat [namakota]\n";
-    $text .= "> /playstore [namaapk]\n";
     $text .= "> /creator\n";
     $text .= "> /myinfo\n";
     $balas = array(
@@ -663,7 +422,7 @@ if ($type == 'join' || $command == 'Wc') {
     $text .= "       ⤵Selamat Datang di⤵\n";
     $text .= "=======================\n";	
     $text .= "      >ⓜⓐⓘⓝ ⓡⓞⓞⓜ<\n";	
-    $text .= "F͛A͛M͛I͛L͛Y͛ I͛N͛D͛O͛N͛E͛S͛I͛A͛N͛ S͛M͛U͛L͛E͛\n";
+    $text .= "BIRTHDAY EVENT ANNE - 27th\n";
     $text .= "=======================\n";	
     $text .= "  Jangan Lupa Cek Note ya\n";
     $text .= "[Salken dari Saya]->$profil->displayName\n";
@@ -1484,234 +1243,12 @@ if($message['type']=='text') {
             'messages' => array(
                 array(
                     'type' => 'text',
-                    'text' => 'Kok gitu ngomongnya ;( '.$profil->displayName
+                    'text' => 'ish ish kok gitu ka( '.$profil->displayName
                 )
             )
         );
     }
 }
-//pesan bergambar
-if($message['type']=='text')
-	if ($command == 'admin' || $command == 'Admin' )
-	{
-		
-		
-		$balas = array(
-							'replyToken' => $replyToken,														
-							'messages' => array(
-array (
-  'type' => 'template',
-  'altText' => 'FIS MANAGEMENT',
-  'template' => 
-  array (
-    'type' => 'carousel',
-    'columns' => 
-    array (
-      0 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/gDpnMb/20180108_110257.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'FOUNDER',
-        'text' => 'Group Owner -- Name : FahreziLee   Location : Malaysia',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_Lee',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_FahreziLee',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_LEE',
-          ),
-        ),
-      ),
-      1 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/gUFu1b/20180108_110910.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'SECRETARY',
-        'text' => 'Admin -- Name : DeeAna       Location : Borneo',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_DEE',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_Dee',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_Dee',
-          ),
-        ),
-      ),
-      2 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/njD3uw/20180108_111546.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'CREATIVE',
-        'text' => 'Admin -- Name : ALS                 Location : West Java',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_ALS',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_ALS',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_ALS',
-          ),
-        ),
-      ),
-      3 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/nxZySG/20180108_111027.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'RESOURCE',
-        'text' => 'Admin -- Name : Lala              Location : Hongkong',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_LALA',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_LALA',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_LALA',
-          ),
-        ),
-      ),
-      4 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/gRYKZw/20180108_111446.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'HOME AS.',
-        'text' => 'Admin -- Name : Alfariz              Location : Jakarta',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_ALFARIZ',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_Alfariz',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_Alfariz',
-          ),
-        ),
-      ),
-      5 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/npK41b/20180108_111333.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'HOME AS.',
-        'text' => 'Admin -- Name : Juna Hermanza   Location : West Java',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_JUNA',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_Juna',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_Juna',
-          ),
-        ),
-      ),
-      6 => 
-      array (
-        'thumbnailImageUrl' => 'https://preview.ibb.co/edtxMb/20180108_111247.jpg',
-        'imageBackgroundColor' => '#FFFFFF',
-        'title' => 'HOME AS.',
-        'text' => 'Admin -- Name : Anissa              Location : West Java',
-        'actions' => 
-        array (
-          0 => 
-          array (
-            'type' => 'uri',
-            'label' => 'CHAT',
-            'uri' => 'http://tiny.cc/FIS_NISA',
-          ),
-          1 => 
-          array (
-            'type' => 'uri',
-            'label' => 'SMULE',
-            'uri' => 'https://www.smule.com/FIS_Nisa',
-          ),		  
-          2 => 
-          array (
-            'type' => 'message',
-            'label' => 'view detail',
-            'text' => 'FIS_Nisa',
-          ),
-        ),
-      ),
-    ),
-    'imageAspectRatio' => 'rectangle',
-    'imageSize' => 'cover',
-  ),
-)
-							)
-						);
-				
-	}
 //pesan bergambar
 if($message['type']=='text') {
 	    if ($command == 'Welcome' || $command == 'wc' ) {
@@ -1746,235 +1283,6 @@ if($message['type']=='text') {
     array (
       'type' => 'message',
       'text' => 'Admin',
-      'area' => 
-      array (
-        'x' => 520,
-        'y' => 0,
-        'width' => 520,
-        'height' => 1040,
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Puasa' || $command == 'puasa' ) {
-
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526133379/line/Bot/Puasa',
-  'altText' => 'SELAMAT BERPUASA FIS FAMILY',
-  'baseSize' => 
-  array (
-    'height' => 1040,
-    'width' => 1040,
-  ),
-  'actions' => 
-  array (
-    0 => 
-    array (
-      'type' => 'message',
-      'text' => 'Puasa',
-      'area' => 
-      array (
-        'x' => 520,
-        'y' => 0,
-        'width' => 520,
-        'height' => 1040,
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Buka' || $command == 'buka puasa' ) {
-
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526285679/line/buka',
-  'altText' => 'SELAMAT BERBUKA PUASA',
-  'baseSize' => 
-  array (
-    'height' => 1040,
-    'width' => 1040,
-  ),
-  'actions' => 
-  array (
-    0 => 
-    array (
-      'type' => 'message',
-      'text' => 'Buka',
-      'area' => 
-      array (
-        'x' => 520,
-        'y' => 0,
-        'width' => 520,
-        'height' => 1040,
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Sahur' || $command == 'sahur' ) {
-
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526285827/line/sahur',
-  'altText' => 'SELAMAT SANTAP SAHUR',
-  'baseSize' => 
-  array (
-    'height' => 1040,
-    'width' => 1040,
-  ),
-  'actions' => 
-  array (
-    0 => 
-    array (
-      'type' => 'message',
-      'text' => 'Sahur',
-      'area' => 
-      array (
-        'x' => 520,
-        'y' => 0,
-        'width' => 520,
-        'height' => 1040,
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Goda1' || $command == 'goda1' ) {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526287910/line/goda1',
-  'altText' => 'Kamu kuat kan puasanya ?',
-  'baseSize' => 
-  array (
-    'height' => 1040,
-    'width' => 1040,
-  ),
-  'actions' => 
-  array (
-    0 => 
-    array (
-      'type' => 'message',
-      'text' => 'Goda1',
-      'area' => 
-      array (
-        'x' => 520,
-        'y' => 0,
-        'width' => 520,
-        'height' => 1040,
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Fis' || $command == 'fis' ) {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1524724017/line/Bot/visi',
-  'altText' => 'visi misi',
-  'baseSize' => 
-  array (
-    'height' => 1040,
-    'width' => 1040,
-  ),
-  'actions' => 
-  array (
-    0 => 
-    array (
-      'type' => 'message',
-      'text' => 'flag',
-      'area' => 
-      array (
-        'x' => 520,
-        'y' => 0,
-        'width' => 520,
-        'height' => 1040,
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'flag' || $command == 'Flag' ) {
-
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'video',
-  'originalContentUrl' => 'https://res.cloudinary.com/tes5566/video/upload/v1524724365/line/Bot/video/2018_04_26_13_09_51.mp4',
-  'previewImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1524725537/line/Bot/video/20180426_130843.jpg',
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Minum' || $command == 'haus' ) {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526287217/line/goda',
-  'altText' => 'Yang haus yang haus ?',
-  'baseSize' => 
-  array (
-    'height' => 1040,
-    'width' => 1040,
-  ),
-  'actions' => 
-  array (
-    0 => 
-    array (
-      'type' => 'message',
-      'text' => 'Minum',
       'area' => 
       array (
         'x' => 520,
