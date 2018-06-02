@@ -395,6 +395,8 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "> welcome\n"; 
     $text .= "> Crew\n";
     $text .= "> Judges\n";
+    $text .= "> Sponsored\n";
+    $text .= "> Creator\n";
     $text .= "> /shalat [namakota]\n";
     $text .= "> /zodiak [tanggallahir]\n";
     $text .= "> /lokasi [namakota]\n";
@@ -402,7 +404,6 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "> /kalender [namakota]\n";
     $text .= "> /cuaca [namakota]\n";
     $text .= "> /qiblat [namakota]\n";
-    $text .= "> /creator\n";
     $text .= "> /myinfo\n";
     $balas = array(
         'replyToken' => $replyToken,
@@ -780,111 +781,9 @@ if($message['type']=='text') {
     }
 }
 if($message['type']=='text') {
-	    if ($command == '/anime') {
-        $result = anime($options);
-        $altText = "Title : " . $result['title'];
-        $altText .= "\n\n" . $result['desc'];
-        $altText .= "\nMAL Page : https://myanimelist.net/anime/" . $result['id'];
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'template',
-                    'altText' => $altText,
-                    'template' => array(
-                        'type' => 'buttons',
-                        'title' => $result['title'],
-                        'thumbnailImageUrl' => $result['image'],
-                        'text' => $result['desc'],
-                        'actions' => array(
-                            array(
-                                'type' => 'postback',
-                                'label' => 'Baca Sinopsis-nya',
-                                'data' => 'action=add&itemid=123',
-                                'text' => '/anime-syn ' . $options
-                            ),
-                            array(
-                                'type' => 'uri',
-                                'label' => 'Website MAL',
-                                'uri' => 'https://myanimelist.net/anime/' . $result['id']
-                            )
-                        )
-                    )
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-	    if ($command == '/manga') {
-        $result = manga($options);
-        $altText = "Title : " . $result['title'];
-        $altText .= "\n\n" . $result['desc'];
-        $altText .= "\nMAL Page : https://myanimelist.net/manga/" . $result['id'];
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'template',
-                    'altText' => $altText,
-                    'template' => array(
-                        'type' => 'buttons',
-                        'title' => $result['title'],
-                        'thumbnailImageUrl' => $result['image'],
-                        'text' => $result['desc'],
-                        'actions' => array(
-                            array(
-                                'type' => 'postback',
-                                'label' => 'Baca Sinopsis-nya',
-                                'data' => 'action=add&itemid=123',
-                                'text' => '/manga-syn' . $options
-                            ),
-                            array(
-                                'type' => 'uri',
-                                'label' => 'Website MAL',
-                                'uri' => 'https://myanimelist.net/manga/' . $result['id']
-                            )
-                        )
-                    )
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-	    if ($command == '/anime-syn') {
-
-        $result = anime_syn($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
 	    if ($command == '/film') {
 
         $result = film($options);
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array(
-                    'type' => 'text',
-                    'text' => $result
-                )
-            )
-        );
-    }
-}
-if($message['type']=='text') {
-	    if ($command == '/manga-syn') {
-
-        $result = manga_syn($options);
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -1258,8 +1157,8 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1524552956/line/Bot/Example',
-  'altText' => 'WELCOME TO FIS FAMILY',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527884213/ANNE/WELCOME',
+  'altText' => 'WELCOME TO BIRTHDAY EVENT ANNE,
   'baseSize' => 
   array (
     'height' => 1040,
@@ -1269,8 +1168,8 @@ if($message['type']=='text') {
   array (
     0 => 
     array (
-      'type' => 'uri',
-      'linkUri' => 'https://www.smule.com/FIS_OFFICIAL',
+      'type' => 'message',
+      'text' => 'Sponsored',
       'area' => 
       array (
         'x' => 0,
@@ -1282,13 +1181,44 @@ if($message['type']=='text') {
     1 => 
     array (
       'type' => 'message',
-      'text' => 'Admin',
+      'text' => 'Crew',
       'area' => 
       array (
         'x' => 520,
         'y' => 0,
         'width' => 520,
         'height' => 1040,
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Creator' || $command == 'creator' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'CREATOR',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527920386/Creator/20180602_131746.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'CHAT PM',
+          'uri' => 'http://line.me/ti/p/8jX6OIm-AS',
+        ),
       ),
     ),
   ),
@@ -1311,237 +1241,7 @@ if($message['type']=='text') {
                 )
             )
         );
-    } else if ($command == '/') {
-
-	        $balas = array(
-							'replyToken' => $replyToken,
-							'messages' => array(
-								array (
-										  'type' => 'template',
-										  'altText' => 'Silahkan Pilih Keyword Yang Anda Inginkan',
-										  'template' => 
-										  array (
-										    'type' => 'carousel',
-										    'columns' => 
-										    array (
-										      0 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 1',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'JUDGES',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik Judges'
-										          ),
-										          1 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Sinopsis Anime',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /anime-syn [Judul Anime]'
-												  ),
-										          2 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Manga',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /manga [Judul Manga]'
-										          ),
-										        ),
-										      ),
-										      1 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 2',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Sinopsis Manga',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /manga-syn [Judul Manga]'
-										          ),
-										          1 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Film',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /film [Judul Film]'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Sinopsis Film',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /film-syn [Judul Film]'
-										          ),
-										        ),
-										      ),
-										      2 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 3',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Aplikasi',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /playstore [Nama Aplikasi]'
-										          ),
-										          1 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Informasi',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /myinfo'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Zodiak',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /zodiak [Tanggal Lahir]'
-										          ),
-										        ),
-										      ),
-										      3 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 4',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Music',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /music [Judul Lagu]'
-										          ),
-										          1 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Lirik',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /lirik [Judul Lagu]'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Waktu',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /time [Nama Kota]'
-										          ),
-										        ),
-										      ),
-										      4 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 5',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Lokasi',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /lokasi [Nama Kota]'
-										          ),
-										          1 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Kalender',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /kalender [Nama Kota]'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari KosaKata',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /def [Kata]'
-										          ),
-										        ),
-										      ),
-										      5 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 6',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Cari Qiblat',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /qiblat [Nama Kota]'
-										          ),
-										          1 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Jadwal Shalat',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /shalat [Nama Kota]'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Cari Cuaca',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /cuaca [Nama Kota]'
-										          ),
-										        ),
-										      ),
-										      6 => 
-										      array (
-										        'thumbnailImageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1525181805/line/EVENT/crew/Untitled-1.jpg',
-										        'title' => 'Keyword 7',
-										        'text' => 'Silahkan Dipilih',
-										        'actions' => 
-										        array (
-										          0 => 
-										          array (
-										            'type' => 'postback',
-										            'label' => 'Convert',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /convert [Link]'
-										          ),
-										          1 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'About',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /about'
-										          ),
-										          2 => 
-										          array (
-													'type' => 'postback',
-													'label' => 'Creator',
-													'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /translate'
-										          ),
-										        ),
-										      ),											  
-										    ),
-										  ),
-										)					
-			 
-        )
-    );
-	}
-	
+    }
 }
 if (isset($balas)) {
     $result = json_encode($balas);
