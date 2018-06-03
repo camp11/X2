@@ -396,6 +396,10 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "> Crew\n";
     $text .= "> Judges\n";
     $text .= "> Sponsored\n";
+    $text .= "> Ready\n"; 
+    $text .= "> Nnestore\n";
+    $text .= "> Azkashop\n";
+    $text .= "> Dwiyahshop\n";
     $text .= "> Creator\n";
     $text .= "> /shalat [namakota]\n";
     $text .= "> /zodiak [tanggallahir]\n";
@@ -1392,6 +1396,165 @@ if($message['type']=='text') {
       0 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925795/ANNE/Sponsor/10.jpg',
+        'action' => 
+        array (
+          'type' => 'message',
+          'label' => 'MORE INFO',
+          'text' => 'Nnestore',
+        ),
+      ),
+      1 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925793/ANNE/Sponsor/11.jpg',
+        'action' => 
+        array (
+          'type' => 'message',
+          'label' => 'MORE INFO',
+          'text' => 'Azkashop',
+        ),
+      ),
+      2 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925792/ANNE/Sponsor/12.jpg',
+        'action' => 
+        array (
+          'type' => 'message',
+          'label' => 'MORE INFO',
+          'text' => 'Dwiyahshop',
+        ),
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Nnestore' || $command == 'nnestore' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'imagemap',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021812/ANNE/READY',
+  'altText' => 'NNESTORE - READY',
+  'baseSize' => 
+  array (
+    'height' => 1040,
+    'width' => 1040,
+  ),
+  'actions' => 
+  array (
+    0 => 
+    array (
+      'type' => 'uri',
+      'linkUri' => 'https://line.me/R/ti/p/%40zuu3727b',
+      'area' => 
+      array (
+        'x' => 0,
+        'y' => 0,
+        'width' => 1040,
+        'height' => 1040,
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Azkashop' || $command == 'azkashop' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'imagemap',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021855/ANNE/ready1',
+  'altText' => 'ASKASHOP - READY',
+  'baseSize' => 
+  array (
+    'height' => 1040,
+    'width' => 1040,
+  ),
+  'actions' => 
+  array (
+    0 => 
+    array (
+      'type' => 'uri',
+      'linkUri' => 'http://line.me/ti/p/~salsabilaazkafa',
+      'area' => 
+      array (
+        'x' => 0,
+        'y' => 0,
+        'width' => 1040,
+        'height' => 1040,
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Dwiyahshop' || $command == 'dwiyahshop' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'imagemap',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021888/ANNE/ready2',
+  'altText' => 'DWIYAHSHOP - READY',
+  'baseSize' => 
+  array (
+    'height' => 1040,
+    'width' => 1040,
+  ),
+  'actions' => 
+  array (
+    0 => 
+    array (
+      'type' => 'uri',
+      'linkUri' => 'http://line.me/ti/p/~dwiyah89',
+      'area' => 
+      array (
+        'x' => 0,
+        'y' => 0,
+        'width' => 1040,
+        'height' => 1040,
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Ready' || $command == 'READY' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'READY ALL SHOP',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021812/ANNE/READY/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
