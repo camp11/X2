@@ -1564,7 +1564,7 @@ if($message['type']=='text') {
       ),
       1 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925793/ANNE/Sponsor/11.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021855/ANNE/ready1/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1574,7 +1574,7 @@ if($message['type']=='text') {
       ),
       2 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925792/ANNE/Sponsor/12.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021888/ANNE/ready2/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
