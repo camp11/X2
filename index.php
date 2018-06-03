@@ -1524,7 +1524,28 @@ if($message['type']=='text') {
           'text' => 'Dwiyahshop',
         ),
       ),
-      3 => 
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == '.' || $command == 'support' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'SUPPORTED',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060442288.jpg',
         'action' => 
@@ -1534,7 +1555,7 @@ if($message['type']=='text') {
           'uri' => 'http://line.me/ti/p/~bigboneless',
         ),
       ),
-      4 => 
+      1 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060443867.jpg',
         'action' => 
@@ -1544,7 +1565,7 @@ if($message['type']=='text') {
           'uri' => 'http://line.me/ti/p/~bigboneless',
         ),
       ),
-      5 => 
+      2 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060447094.jpg',
         'action' => 
@@ -1554,7 +1575,7 @@ if($message['type']=='text') {
           'uri' => 'http://line.me/ti/p/~bigboneless',
         ),
       ),
-      5 => 
+      3 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060581/ANNE/Sponsor/20180604_040315.png',
         'action' => 
@@ -1564,7 +1585,7 @@ if($message['type']=='text') {
           'uri' => 'http://line.me/ti/p/~bigboneless',
         ),
       ),
-      2 => 
+      4 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060451739.jpg',
         'action' => 
