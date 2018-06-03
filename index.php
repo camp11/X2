@@ -1524,6 +1524,56 @@ if($message['type']=='text') {
           'text' => 'Dwiyahshop',
         ),
       ),
+      3 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060442288.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      4 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060443867.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      5 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060447094.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      5 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060581/ANNE/Sponsor/20180604_040315.png',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      2 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060451739.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
     ),
   ),
 )
