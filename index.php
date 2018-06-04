@@ -1691,6 +1691,87 @@ if($message['type']=='text') {
         );
     }
 }
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'SupportedBy' || $command == 'support' ) {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'template',
+  'altText' => 'SUPPORTED BY',
+  'template' => 
+  array (
+    'type' => 'image_carousel',
+    'columns' => 
+    array (
+      0 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528115609/ANNE/Sponsor/1528115453880.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),	    
+      1 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060442288.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      2 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060443867.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      3 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060447094.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      4 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060581/ANNE/Sponsor/20180604_040315.png',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      5 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060451739.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+    ),
+  ),
+)
+            )
+        );
+    }
+}
 if (isset($balas)) {
     $result = json_encode($balas);
 //$result = ob_get_clean();
