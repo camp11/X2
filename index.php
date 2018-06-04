@@ -396,7 +396,7 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "> Crew\n";
     $text .= "> Judges\n";
     $text .= "> Sponsored\n";
-    $text .= "> Supported By\n";
+    $text .= "> SupportedBy\n";
     $text .= "> Ready\n"; 
     $text .= "> Nnestore\n";
     $text .= "> Azkashop\n";
@@ -1534,13 +1534,13 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Supported By' || $command == 'support' ) {
+	    if ($command == 'SupportedBy' || $command == 'support' ) {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array (
   'type' => 'template',
-  'altText' => 'SUPPORTED',
+  'altText' => 'SUPPORTED BY',
   'template' => 
   array (
     'type' => 'image_carousel',
