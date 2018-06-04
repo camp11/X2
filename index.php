@@ -1533,7 +1533,7 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == '.' || $command == 'support' ) {
+	    if ($command == 'Supported By' || $command == 'support' ) {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -1547,17 +1547,17 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060442288.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528115609/ANNE/Sponsor/1528115453880.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'MORE INFO',
           'uri' => 'http://line.me/ti/p/~bigboneless',
         ),
-      ),
+      )	    
       1 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060443867.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060442288.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1567,7 +1567,7 @@ if($message['type']=='text') {
       ),
       2 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060447094.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060443867.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1577,7 +1577,7 @@ if($message['type']=='text') {
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060581/ANNE/Sponsor/20180604_040315.png',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060447094.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1586,6 +1586,16 @@ if($message['type']=='text') {
         ),
       ),
       4 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060581/ANNE/Sponsor/20180604_040315.png',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~bigboneless',
+        ),
+      ),
+      5 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060451739.jpg',
         'action' => 
