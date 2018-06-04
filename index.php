@@ -396,6 +396,7 @@ if ($type == 'join' || $command == 'Help') {
     $text .= "> Crew\n";
     $text .= "> Judges\n";
     $text .= "> Sponsored\n";
+    $text .= "> Supported By\n";
     $text .= "> Ready\n"; 
     $text .= "> Nnestore\n";
     $text .= "> Azkashop\n";
