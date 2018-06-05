@@ -1732,7 +1732,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~bigboneless',
+          'uri' => 'http://line.me/ti/p/%40vje0420h',
         ),
       ),
       3 => 
@@ -1742,7 +1742,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~bigboneless',
+          'uri' => 'http://line.me/ti/p/%40qco3210e',
         ),
       ),
       4 => 
@@ -1752,7 +1752,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~bigboneless',
+          'uri' => 'http://line.me/ti/p/8jX6OIm-AS',
         ),
       ),
       5 => 
@@ -1762,7 +1762,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~bigboneless',
+          'uri' => 'http://line.me/ti/p/~xperia_12',
         ),
       ),
     ),
