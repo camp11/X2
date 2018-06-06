@@ -1525,6 +1525,16 @@ if($message['type']=='text') {
           'text' => 'Dwiyahshop',
         ),
       ),
+      3 => 
+      array (
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528285074/ANNE/Sponsor/1528284949149.jpg',
+        'action' => 
+        array (
+          'type' => 'uri',
+          'label' => 'MORE INFO',
+          'uri' => 'http://line.me/ti/p/~yudhadynaflow',
+        ),
+      ),
     ),
   ),
 )
