@@ -1248,16 +1248,6 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527924308/ANNE/CREW%20JUDGES/Untitled11.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/nneKBS',
-        ),
-      ),
-      1 => 
-      array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885195/ANNE/CREW%20JUDGES/1.jpg',
         'action' => 
         array (
@@ -1266,7 +1256,7 @@ if($message['type']=='text') {
           'uri' => 'http://smule.com/EBS_BRenoJL_KBS',
         ),
       ),
-      2 => 
+      1 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885205/ANNE/CREW%20JUDGES/2.jpg',
         'action' => 
@@ -1276,7 +1266,7 @@ if($message['type']=='text') {
           'uri' => 'http://smule.com/VIF_lien',
         ),
       ),
-      3 => 
+      2 => 
       array (
         'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885197/ANNE/CREW%20JUDGES/3.jpg',
         'action' => 
