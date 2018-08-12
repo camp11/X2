@@ -392,15 +392,12 @@ function zodiak($keyword) {
 if ($type == 'join' || $command == 'Help') {
     $text .= "==[Main Keywords]==";
     $text .= "> \n";
-    $text .= "> welcome\n"; 
-    $text .= "> Crew\n";
-    $text .= "> Judges\n";
-    $text .= "> Sponsored\n";
-    $text .= "> SupportedBy\n";
-    $text .= "> Ready\n"; 
-    $text .= "> Nnestore\n";
-    $text .= "> Azkashop\n";
-    $text .= "> Dwiyahshop\n";
+    $text .= "> Welcome\n"; 
+    $text .= "> Admin\n";
+    $text .= "> Program\n";
+    $text .= "> Struktur\n";
+    $text .= "> Visi\n";
+    $text .= "> Key\n";
     $text .= "> Creator\n";
     $text .= "> /shalat [namakota]\n";
     $text .= "> /zodiak [tanggallahir]\n";
@@ -422,16 +419,67 @@ if ($type == 'join' || $command == 'Help') {
 }
 #-------------------------[Function]-------------------------#
 //show menu, saat join dan command,menu
-if ($type == 'join' || $command == 'Wc') {
+if ($type == 'join' || $command == 'Dev') {
+    $text .= " \n";
+    $text .= " 􀀹⚡⚡⚡⚡⚡⚡⚡⚡􀀹\n";
+    $text .= "======[HALLO KBS]======";
+    $text .= " \n";
+    $text .= "Terima Kasih Atas Invite nya\n";
+    $text .= "=======================\n";	
+    $text .= "=>Developer BOT ketik Creator\n";
+    $text .= "=>Jangan Lupa BOTnya di-Add\n";
+    $text .= "    dulu ya 􀀅􀀰\n";
+    $text .= " 􀀹⚡⚡⚡⚡⚡⚡⚡⚡􀀹\n";
+    $balas = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+            array(
+                'type' => 'text',
+                'text' => $text
+            )
+        )
+    );
+}
+#-------------------------[Function]-------------------------#
+if ($type == 'text' || $command == 'Wc') {
     $text .= "====[HALLO WELCOME]====";
     $text .= " \n";
     $text .= "       ⤵Selamat Datang di⤵\n";
     $text .= "=======================\n";	
-    $text .= "      >ⓜⓐⓘⓝ ⓡⓞⓞⓜ<\n";	
-    $text .= "BIRTHDAY EVENT ANNE - 27th\n";
+    $text .= "           >Family NEW-KBS<\n";	
+    $text .= "     KOMUNITAS BERNYANYI SMULE";
+    $text .= " \n";
     $text .= "=======================\n";	
     $text .= "  Jangan Lupa Cek Note ya\n";
     $text .= "[Salken dari Saya]->$profil->displayName\n";
+    $balas = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+            array(
+                'type' => 'text',
+                'text' => $text
+            )
+        )
+    );
+}
+#-------------------------[Function]-------------------------#
+//show menu, saat join dan command,menu
+if ($type == 'text' || $command == 'Key') {
+    $text .= "==[Additional Keywords]==";
+    $text .= "> \n";
+    $text .= "> Bot\n"; 
+    $text .= "> Pagi\n";
+    $text .= "> Siang\n";
+    $text .= "> Sore\n";
+    $text .= "> Malam\n";
+    $text .= "> Haha\n";
+    $text .= "> Sepi\n";
+    $text .= "> Assalamualaikum\n";
+    $text .= "> waalaikumsalam\n";
+    $text .= "> Hai\n";
+    $text .= "> Halo\n";
+    $text .= "> Ok\n";
+    $text .= "> Udah";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -1162,8 +1210,8 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527884213/ANNE/WELCOME',
-  'altText' => 'WELCOME TO BIRTHDAY EVENT ANNE',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075377/KBS/1',
+  'altText' => 'WELCOME Family NEW KBS',
   'baseSize' => 
   array (
     'height' => 1040,
@@ -1173,8 +1221,8 @@ if($message['type']=='text') {
   array (
     0 => 
     array (
-      'type' => 'message',
-      'text' => 'Sponsored',
+      'type' => 'uri',
+      'Linkuri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
       'area' => 
       array (
         'x' => 0,
@@ -1186,7 +1234,7 @@ if($message['type']=='text') {
     1 => 
     array (
       'type' => 'message',
-      'text' => 'AllCrew',
+      'text' => 'Struktur',
       'area' => 
       array (
         'x' => 520,
@@ -1223,128 +1271,6 @@ if($message['type']=='text') {
           'type' => 'uri',
           'label' => 'CHAT PM',
           'uri' => 'http://line.me/ti/p/8jX6OIm-AS',
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Judges' || $command == 'judges' ) {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'template',
-  'altText' => 'JUDGES EVENT',
-  'template' => 
-  array (
-    'type' => 'image_carousel',
-    'columns' => 
-    array (
-      0 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885195/ANNE/CREW%20JUDGES/1.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/EBS_BRenoJL_KBS',
-        ),
-      ),
-      1 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885205/ANNE/CREW%20JUDGES/2.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/VIF_lien',
-        ),
-      ),
-      2 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885197/ANNE/CREW%20JUDGES/3.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/_CiNTA7D_PSE_SWX',
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
-	    if ($command == 'Crew' || $command == 'crew' ) {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'template',
-  'altText' => 'CREWS EVENT',
-  'template' => 
-  array (
-    'type' => 'image_carousel',
-    'columns' => 
-    array (
-      0 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527924308/ANNE/CREW%20JUDGES/Untitled11.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/nneKBS',
-        ),
-      ),	
-      1 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885191/ANNE/CREW%20JUDGES/4.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/KVA1_LUFFY_NGVC',
-        ),
-      ),
-      2 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885202/ANNE/CREW%20JUDGES/5.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/KBS_sailup',
-        ),
-      ),
-      3 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885198/ANNE/CREW%20JUDGES/6.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/_DFS_CICIK_NL98',
-        ),
-      ),
-      4 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527885199/ANNE/CREW%20JUDGES/7.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'SMULE',
-          'uri' => 'http://smule.com/AVRILMelvo_KBS',
         ),
       ),
     ),
@@ -1473,67 +1399,6 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Sponsored' || $command == 'sponsor' ) {
-        $balas = array(
-            'replyToken' => $replyToken,
-            'messages' => array(
-                array (
-  'type' => 'template',
-  'altText' => 'SPONSOR EVENT',
-  'template' => 
-  array (
-    'type' => 'image_carousel',
-    'columns' => 
-    array (
-      0 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925795/ANNE/Sponsor/10.jpg',
-        'action' => 
-        array (
-          'type' => 'message',
-          'label' => 'MORE INFO',
-          'text' => 'Nnestore',
-        ),
-      ),
-      1 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925793/ANNE/Sponsor/11.jpg',
-        'action' => 
-        array (
-          'type' => 'message',
-          'label' => 'MORE INFO',
-          'text' => 'Azkashop',
-        ),
-      ),
-      2 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1527925792/ANNE/Sponsor/12.jpg',
-        'action' => 
-        array (
-          'type' => 'message',
-          'label' => 'MORE INFO',
-          'text' => 'Dwiyahshop',
-        ),
-      ),
-      3 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528285074/ANNE/Sponsor/1528284949149.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~yudhadynaflow',
-        ),
-      ),
-    ),
-  ),
-)
-            )
-        );
-    }
-}
-//pesan bergambar
-if($message['type']=='text') {
 	    if ($command == 'Nnestore' || $command == 'nnestore' ) {
 
         $balas = array(
@@ -1570,15 +1435,15 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Azkashop' || $command == 'azkashop' ) {
+	    if ($command == 'Struktur' || $command == 'Staff' ) {
 
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021855/ANNE/ready1',
-  'altText' => 'ASKASHOP - READY',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075402/KBS/2/1040.jpg',
+  'altText' => 'Staff Organization New KBS',
   'baseSize' => 
   array (
     'height' => 1040,
@@ -1588,13 +1453,13 @@ if($message['type']=='text') {
   array (
     0 => 
     array (
-      'type' => 'uri',
-      'linkUri' => 'http://line.me/ti/p/~salsabilaazkafa',
+      'type' => 'message',
+      'text' => 'Struktur',
       'area' => 
       array (
-        'x' => 0,
+        'x' => 520,
         'y' => 0,
-        'width' => 1040,
+        'width' => 520,
         'height' => 1040,
       ),
     ),
@@ -1606,15 +1471,15 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Dwiyahshop' || $command == 'dwiyahshop' ) {
+	    if ($command == 'Program' || $command == 'program' ) {
 
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021888/ANNE/ready2',
-  'altText' => 'DWIYAHSHOP - READY',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075430/KBS/3/1040.png',
+  'altText' => 'Program New KBS',
   'baseSize' => 
   array (
     'height' => 1040,
@@ -1624,13 +1489,13 @@ if($message['type']=='text') {
   array (
     0 => 
     array (
-      'type' => 'uri',
-      'linkUri' => 'http://line.me/ti/p/~dwiyah89',
+      'type' => 'message',
+      'text' => 'Program',
       'area' => 
       array (
-        'x' => 0,
+        'x' => 520,
         'y' => 0,
-        'width' => 1040,
+        'width' => 520,
         'height' => 1040,
       ),
     ),
@@ -1642,47 +1507,32 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Ready' || $command == 'READY' ) {
+	    if ($command == 'Visi' || $command == 'Misi' ) {
+
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array (
-  'type' => 'template',
-  'altText' => 'READY ALL SHOP',
-  'template' => 
+  'type' => 'imagemap',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075454/KBS/4/1040.jpg',
+  'altText' => 'VISI & MISI New KBS',
+  'baseSize' => 
   array (
-    'type' => 'image_carousel',
-    'columns' => 
+    'height' => 1040,
+    'width' => 1040,
+  ),
+  'actions' => 
+  array (
+    0 => 
     array (
-      0 => 
+      'type' => 'message',
+      'text' => 'Visi',
+      'area' => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021812/ANNE/READY/1040.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'ADD ME',
-          'uri' => 'https://line.me/R/ti/p/%40zuu3727b',
-        ),
-      ),
-      1 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021855/ANNE/ready1/1040.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'ADD ME',
-          'uri' => 'http://line.me/ti/p/~salsabilaazkafa',
-        ),
-      ),
-      2 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528021888/ANNE/ready2/1040.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'ADD ME',
-          'uri' => 'http://line.me/ti/p/~dwiyah89',
-        ),
+        'x' => 520,
+        'y' => 0,
+        'width' => 520,
+        'height' => 1040,
       ),
     ),
   ),
@@ -1693,77 +1543,68 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'SupportedBy' || $command == 'support' ) {
+	    if ($command == 'Haha' || $command == 'Hahaha' ) {
+
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
                 array (
-  'type' => 'template',
-  'altText' => 'SUPPORTED BY',
-  'template' => 
+  'type' => 'imagemap',
+  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1532322034/Stiker/3',
+  'altText' => 'Team VoLS mengirim sticker',
+  'baseSize' => 
   array (
-    'type' => 'image_carousel',
-    'columns' => 
+    'height' => 1040,
+    'width' => 1040,
+  ),
+  'actions' => 
+  array (
+    0 => 
     array (
-      0 => 
+      'type' => 'message',
+      'text' => 'Haha',
+      'area' => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528115609/ANNE/Sponsor/1528115453880.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~bigboneless',
-        ),
-      ),	    
-      1 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060442288.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~bigboneless',
-        ),
+        'x' => 520,
+        'y' => 0,
+        'width' => 520,
+        'height' => 1040,
       ),
-      2 => 
+    ),
+  ),
+)
+            )
+        );
+    }
+}
+//pesan bergambar
+if($message['type']=='text') {
+	    if ($command == 'Sepi' || $command == 'sepi' ) {
+
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array (
+  'type' => 'imagemap',
+  'baseUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1532323952/Stiker/4',
+  'altText' => 'Team VoLS mengirim sticker',
+  'baseSize' => 
+  array (
+    'height' => 1040,
+    'width' => 1040,
+  ),
+  'actions' => 
+  array (
+    0 => 
+    array (
+      'type' => 'message',
+      'text' => 'Sepi',
+      'area' => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060560/ANNE/Sponsor/1528060443867.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/%40vje0420h',
-        ),
-      ),
-      3 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060447094.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/%40qco3210e',
-        ),
-      ),
-      4 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060581/ANNE/Sponsor/20180604_040315.png',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/8jX6OIm-AS',
-        ),
-      ),
-      5 => 
-      array (
-        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1528060561/ANNE/Sponsor/1528060451739.jpg',
-        'action' => 
-        array (
-          'type' => 'uri',
-          'label' => 'MORE INFO',
-          'uri' => 'http://line.me/ti/p/~xperia_12',
-        ),
+        'x' => 520,
+        'y' => 0,
+        'width' => 520,
+        'height' => 1040,
       ),
     ),
   ),
