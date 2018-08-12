@@ -447,7 +447,7 @@ if ($type == 'text' || $command == 'Wc') {
     $text .= "       ⤵Selamat Datang di⤵\n";
     $text .= "=======================\n";	
     $text .= "           >Family NEW-KBS<\n";	
-    $text .= "     KOMUNITAS BERNYANYI SMULE";
+    $text .= " KOMUNITAS BERNYANYI SMULE";
     $text .= " \n";
     $text .= "=======================\n";	
     $text .= "  Jangan Lupa Cek Note ya\n";
@@ -1222,7 +1222,7 @@ if($message['type']=='text') {
     0 => 
     array (
       'type' => 'uri',
-      'Linkuri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+      'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
       'area' => 
       array (
         'x' => 0,
