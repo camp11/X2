@@ -1442,7 +1442,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075402/KBS/2/1040.jpg',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534077097/KBS/2',
   'altText' => 'Staff Organization New KBS',
   'baseSize' => 
   array (
@@ -1478,7 +1478,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075430/KBS/3/1040.png',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075430/KBS/3',
   'altText' => 'Program New KBS',
   'baseSize' => 
   array (
@@ -1514,7 +1514,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075454/KBS/4/1040.jpg',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075454/KBS/4',
   'altText' => 'VISI & MISI New KBS',
   'baseSize' => 
   array (
