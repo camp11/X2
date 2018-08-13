@@ -1296,7 +1296,7 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1306,7 +1306,7 @@ if($message['type']=='text') {
       ),
       1 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1316,7 +1316,7 @@ if($message['type']=='text') {
       ),
       2 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1326,7 +1326,7 @@ if($message['type']=='text') {
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1336,7 +1336,7 @@ if($message['type']=='text') {
       ),
       4 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1346,7 +1346,7 @@ if($message['type']=='text') {
       ),
       5 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1367,7 +1367,7 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1377,7 +1377,7 @@ if($message['type']=='text') {
       ),
       1 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1387,7 +1387,7 @@ if($message['type']=='text') {
       ),
       2 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1397,7 +1397,7 @@ if($message['type']=='text') {
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1407,7 +1407,7 @@ if($message['type']=='text') {
       ),
       4 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1417,7 +1417,7 @@ if($message['type']=='text') {
       ),
       5 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
