@@ -1282,7 +1282,7 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Staff' || $command == 'Admin' ) {
+	    if ($command == 'Staff' || $command == 'staff' ) {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -1296,12 +1296,12 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       1 => 
@@ -1311,7 +1311,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       2 => 
@@ -1321,17 +1321,17 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       4 => 
@@ -1341,7 +1341,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       5 => 
@@ -1351,7 +1351,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
     ),
@@ -1372,7 +1372,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       1 => 
@@ -1382,7 +1382,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       2 => 
@@ -1392,17 +1392,17 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       4 => 
@@ -1412,7 +1412,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
       5 => 
@@ -1422,7 +1422,7 @@ if($message['type']=='text') {
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'linkUri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
         ),
       ),
     ),
