@@ -1442,7 +1442,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534077097/KBS/2',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534129121/KBS/5',
   'altText' => 'Staff Organization New KBS',
   'baseSize' => 
   array (
