@@ -1234,7 +1234,7 @@ if($message['type']=='text') {
     1 => 
     array (
       'type' => 'message',
-      'text' => 'Struktur',
+      'text' => 'Staff',
       'area' => 
       array (
         'x' => 520,
@@ -1486,7 +1486,7 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Struktur' || $command == 'Staff' ) {
+	    if ($command == 'Struktur' || $command == 'struktur' ) {
 
         $balas = array(
             'replyToken' => $replyToken,
