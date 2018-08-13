@@ -1210,7 +1210,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array (
   'type' => 'imagemap',
-  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534075377/KBS/1',
+  'baseUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534162853/KBS/1',
   'altText' => 'WELCOME Family NEW KBS',
   'baseSize' => 
   array (
