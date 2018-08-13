@@ -1296,7 +1296,7 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
         'action' => 
         array (
           'type' => 'uri',
