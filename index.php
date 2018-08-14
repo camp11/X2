@@ -1282,7 +1282,7 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Staff' || $command == 'staff' ) {
+	    if ($command == 'Stafff' || $command == 'stafff' ) {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
