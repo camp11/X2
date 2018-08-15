@@ -1282,7 +1282,7 @@ if($message['type']=='text') {
 }
 //pesan bergambar
 if($message['type']=='text') {
-	    if ($command == 'Stafff' || $command == 'stafff' ) {
+	    if ($command == 'Staff' || $command == 'staff' ) {
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -1296,7 +1296,7 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335916/KBS/COVER/1534335598064.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1306,7 +1306,7 @@ if($message['type']=='text') {
       ),
       1 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335916/KBS/COVER/1534335596516.jpg',
         'action' => 
         array (
           'type' => 'uri',
@@ -1316,42 +1316,42 @@ if($message['type']=='text') {
       ),
       2 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335916/KBS/COVER/1534335586077.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/nneKBS',
         ),
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335917/KBS/COVER/1534335589001.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/IVK_DY4N4_KBS',
         ),
       ),
       4 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335917/KBS/COVER/1534335590622.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/EBS_BRenoJL_KBS',
         ),
       ),
       5 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335917/KBS/COVER/1534335592339.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/VIF_Lien',
         ),
       ),
     ),
@@ -1367,62 +1367,62 @@ if($message['type']=='text') {
     array (
       0 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335917/KBS/COVER/1534335587551.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/_CINTA7D_PSE_SWX',
         ),
       ),
       1 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335916/KBS/COVER/1534335583279.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/VIF_nidhal',
         ),
       ),
       2 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335921/KBS/COVER/1534335595180.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/Want_KBS',
         ),
       ),
       3 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335916/KBS/COVER/1534335584592.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/Wan_FDS',
         ),
       ),
       4 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534335918/KBS/COVER/1534335593809.jpg',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/KBSvhy21C_MISI',
         ),
       ),
       5 => 
       array (
-        'imageUrl' => 'https://res.cloudinary.com/tes5566/image/upload/v1526286335/line/EVENT/NOTAVAILABLE/1040.jpg',
+        'imageUrl' => '',
         'action' => 
         array (
           'type' => 'uri',
           'label' => 'SMULE',
-          'uri' => 'https://www.smule.com/NEW_KBS_OFFICIAL',
+          'uri' => 'https://www.smule.com/KBS_451H_NICE_95',
         ),
       ),
     ),
