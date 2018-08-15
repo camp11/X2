@@ -1417,7 +1417,7 @@ if($message['type']=='text') {
       ),
       5 => 
       array (
-        'imageUrl' => '',
+        'imageUrl' => 'https://res.cloudinary.com/eds0101/image/upload/v1534337270/KBS/COVER/20180815_194522.jpg',
         'action' => 
         array (
           'type' => 'uri',
